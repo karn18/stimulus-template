@@ -25,3 +25,9 @@ application.register('template', StimulusTemplateController)
 ```node
 $ yarn build
 ```
+
+## Test
+
+```node
+$ yarn test
+```
