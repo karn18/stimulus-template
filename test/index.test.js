@@ -2,17 +2,18 @@ import { register } from './helper'
 import TemplateController from '../src/index'
 
 const startStimulus = () => {
-  // const application = Application.start()
-  // application.register('template', TemplateController)
   const controllers = {
     'template': TemplateController
   }
   register(controllers)
 }
 
+beforeAll(() => {
+  startStimulus()
+})
+
 describe('Template Controller', () => {
   beforeEach(() => {
-    startStimulus();
     document.body.innerHTML = `
       <div data-controller="template">
         <h1 data-template-target="output"></h1>
