@@ -1,10 +1,9 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ 'element' ]
+  static targets = [ 'output' ]
 
   connect () {
-    console.warn("WARNING!!! You can use this controller with caution")
-    console.log("hello")
+    this.outputTarget.textContent = "Hello, Stimulus!";
   }
 }
